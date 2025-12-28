@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Earth Dreams Entertainment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{margin:0;font-family:system-ui;background:#0b0b0b;color:#fff}
+.dark{background:#0b0b0b;color:#fff}
+.light{background:#f5f5f5;color:#111}
+
+/* MAIN LOGO */
+.logo-area{
+ position:fixed;
+ top:14px;
+ left:14px;
+ z-index:3000;
+ background:#000;
+ padding:15px 18px;
+ border-radius:999px;
+ display:flex;
+ align-items:center;
+ box-shadow:0 6px 18px rgba(0,0,0,.6);
+}
+.logo-area img{
+ height:80px;
+ width:auto;
+ border-radius:999px;
+}
+
+/* SIDEBAR */
+.sidebar{
+ position:fixed;
+ left:0;top:0;bottom:0;
+ width:220px;
+ background:#111;
+ overflow:hidden;
+ z-index:1000;
+}
+
+/* SECOND LOGO (FULL HEIGHT) */
+.sidebar-brand{
+ position:absolute;
+ inset:0;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ opacity:.08;
+ pointer-events:none;
+}
+.sidebar-brand img{
+ height:80%;
+ width:auto;
+}
+
+/* SIDEBAR CONTENT */
+.sidebar-content{
+ position:relative;
+ z-index:10;
+ padding:20px;
+ padding-top:120px;
+ display:flex;
+ flex-direction:column;
+ gap:16px;
+}
+
+.sidebar nav a{
+ color:#fff;
+ text-decoration:none;
+ display:block;
+ margin:6px 0;
+ font-weight:500;
+}
+
+.sidebar button{
+ padding:10px;
+ border:none;
+ border-radius:8px;
+ background:#22c55e;
+ color:#000;
+ font-weight:600;
+ cursor:pointer;
+}
+
+/* MAIN */
+.main{margin-left:240px}
+
+/* HERO */
+.hero{
+ position:relative;
+ height:70vh;
+ overflow:hidden;
+}
+.hero iframe{
+ width:100%;
+ height:100%;
+ border:none;
+}
+.hero-text{
+ position:absolute;
+ bottom:30px;
+ left:30px;
+ background:rgba(0,0,0,.5);
+ padding:20px;
+ border-radius:12px;
+}
+
+/* MOVIES */
+.movies{
+ display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+ gap:16px;
+ padding:24px;
+}
+.movie{
+ background:#111;
+ border-radius:14px;
+ overflow:hidden;
+}
+.movie iframe{
+ width:100%;
+ height:200px;
+ border:none;
+}
+
+/* ABOUT */
+.about{padding:40px}
+
+/* FOOTER */
+footer{
+ padding:24px;
+ text-align:center;
+ background:#111;
+}
+.socials{
+ display:flex;
+ justify-content:center;
+ gap:24px;
+ font-size:26px;
+}
+.socials a{text-decoration:none}
+.socials .fb{color:#1877f2}
+.socials .yt{color:#ff0000}
+.socials .x{color:#ffffff}
+
+.hidden{display:none}
+</style>
+
+<script>
+function scrollToSection(id){
+ document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+function toggleTheme(){
+ document.body.classList.toggle("light");
+ document.body.classList.toggle("dark");
+}
+function toggleVideos(){
+ document.getElementById("movies").classList.toggle("hidden");
+}
+</script>
+</head>
+
+<body class="dark">
+
+<!-- MAIN LOGO -->
+<div class="logo-area">
+  <img src="image/images.png" alt="Main Logo">
+</div>
+
+<div class="sidebar">
+
+  <!-- SECOND LOGO -->
+  <div class="sidebar-brand">
+    <img src="image/3.png" alt="Sidebar Logo">
+  </div>
+
+  <!-- SIDEBAR CONTENT -->
+  <div class="sidebar-content">
+    <nav>
+      <a href="#" onclick="scrollToSection('hero')">Home</a>
+      <a href="#" onclick="scrollToSection('movies')">Movies</a>
+      <a href="#" onclick="scrollToSection('about')">About</a>
+    </nav>
+
+    <button onclick="toggleTheme()">🌓 Theme</button>
+    <button onclick="toggleVideos()">👁 Hide Movies</button>
+  </div>
+</div>
+
+<div class="main">
+
+<section class="hero" id="hero">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Q6N1f0UhCbI?si=t8FAtPv6fynRIMtJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div class="hero-text">
+    <h1>Welcome to Earth Dreams Entertainment</h1>
+    <p>Original African Movies & Creative Media</p>
+  </div>
+</section>
+
+<section class="movies" id="movies">
+  <div class="movie"><iframe width="560" height="315" src="https://www.youtube.com/embed/vqG2AaGP3Fo?si=mahL8aWN3doD0Jga" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+  <div class="movie"><iframe width="560" height="315" src="https://www.youtube.com/embed/6CaGKcjB3lM?si=x4_NNBwGEZFNjyOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+  <div class="movie"><iframe width="560" height="315" src="https://www.youtube.com/embed/Mu1mJ1w9jBQ?si=DYhU_j9U3lktXrs9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+  <div class="movie"><iframe width="560" height="315" src="https://www.youtube.com/embed/4RexSSex_IA?si=z9ry8gWenOKhcjF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></iframe></div>
+  <div class="movie"><iframe width="560" height="315" src="https://www.youtube.com/embed/0djyXJsQqqY?si=yfxSTDC6C2CA97ze" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+  <div class="movie"><iframe width="560" height="315" src="https://www.youtube.com/embed/7i_uQx8HOFA?si=QN9JoOQcm3LpyXnC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+</section>
+
+<section class="about" id="about">
+  <h2>About Earth Dreams Entertainment</h2>
+  <p>Earth Dreams Entertainment is a creative media brand focused on African storytelling, films, and digital content.</p>
+</section>
+
+<footer>
+  <div class="socials">
+    <a class="fb" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    <a class="yt" href="#"><i class="fa-brands fa-youtube"></i></a>
+    <a class="x" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+  </div>
+  <p>© 2025 Earth Dreams Entertainment</p>
+</footer>
+
+</div>
+</body>
+</html>
